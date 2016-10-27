@@ -1,0 +1,16 @@
+<div>
+    
+    <div class="container">
+        <span>Search: <input ng-model="query"></span>
+    </div>
+    
+    <div class="container">
+        <div class="card" ng-repeat="phone in phonelist | filter: query">
+            <img ng-src="{{ phone.img }}">
+            <h2 class="model" href="">{{ phone.model }}</h2>
+            <p class="manufacturer">{{ phone.manufacturer }}</p>
+            <p class="price">{{ phone.price | currency  }}</p>
+        </div>
+    </div>
+
+</div>
